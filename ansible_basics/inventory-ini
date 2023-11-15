@@ -1,0 +1,25 @@
+# this is an example of INI format for your inventory file
+[datacenter1:childred]
+datacenter1-routers
+datacenter1-switches
+
+[datacenter1-routers]
+192.168.1.79
+192.168.1.250
+
+[datacenter1-switches]
+192.168.1.25
+192.168.1.24
+
+# Ansible also allows you to group hosts with a range of IP'switches
+[datacenter1-servers]
+192.168.134.[11:19] # servers 1 - 9
+
+
+[datacenter1-routers:vars]
+ansible_connection = ansible.netcommon.network_cli
+ansible_user = admin
+ansible_password = C!sco12345
+ansible_become = yes
+ansible_become_method = enable
+ansible_network_os = cisco.ios.ios

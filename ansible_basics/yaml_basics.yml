@@ -1,0 +1,14 @@
+---
+# this is a yaml file that describes some basic router configuration items
+# yaml stores this information in a dictionary - in Key : Value pairs
+#
+devicename: Router1
+model: ISR4451
+serial: FOC27348CR9
+Interfaces:
+  - name: GigabitEthernet1/0/1
+    description: Port 1
+  - name: Loopback1
+    description: Management Loopback
+location: Beverly Hills
+contact: John Doe
