@@ -1,6 +1,6 @@
 # simple IOS config in ansible
 ---
-- name: Sample IOS playbook for Ansible core 2.12
+- name: Sample IOS playbook for Ansible
 # this is my group name in my inventory file
   hosts: iosxe
 

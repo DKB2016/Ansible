@@ -1,0 +1,18 @@
+# simple IOS config in ansible
+---
+- name: Sample IOS playbook for Ansible
+# this is my group name in my inventory file
+  hosts: iosxe
+
+  tasks:
+  - name: show
+    cisco.ios.ios_command:
+      - show ip interface brief
+      - show vlan
+      - show ip route summary
+
+  - name: Run multiple commands on remote nodes
+  cisco.ios.ios_command:
+    commands:
+      - show version
+      - show interfaces
